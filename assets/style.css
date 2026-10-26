@@ -1,0 +1,28 @@
+/* tampilan utama udah pake bootstrap, file ini cuma nambahin dikit2 yg ga ada di bootstrap */
+
+/* lebar sidebar pas di layar gede */
+@media (min-width: 992px) {
+  .sidebar { width: 240px; min-height: calc(100vh - 56px); }
+}
+.sidebar .nav-link { border-radius: .4rem; padding: .5rem .8rem; }
+.menu-group { padding: .9rem .8rem .3rem; font-size: .7rem; color: var(--bs-secondary-color); text-transform: uppercase; letter-spacing: .5px; }
+.content { min-width: 0; }
+
+/* kartu statistik di dashboard */
+.stat-card { border-top: 4px solid var(--bs-primary) !important; }
+.stat-card.lunas { border-top-color: var(--bs-success) !important; }
+.stat-card.belum { border-top-color: var(--bs-danger) !important; }
+.stat-card .angka { font-size: 1.6rem; font-weight: 700; }
+
+/* tabel daftar siswa lunas/belum lunas di dashboard, dibatesin tingginya biar ga kepanjangan */
+.list-scroll { max-height: 360px; overflow-y: auto; }
+
+/* halaman login */
+.login-bg { min-height: 100vh; background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+
+/* pas dicetak, sidebar navbar tombol2 disembunyiin biar laporannya bersih */
+@media print {
+  .noprint { display: none !important; }
+  .content { padding: 0 !important; }
+  body { background: #fff !important; }
+}
